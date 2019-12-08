@@ -1,0 +1,29 @@
+#about{
+    background-color: $amarillo;
+    .about-tittle {
+            background-image: url("../images/chacra-nativa-byr.png");
+            background-repeat: no-repeat;
+            background-size: 60%;
+            height: 81px;
+            padding: 0 0px 0 130px;
+        h2 {
+            font-size: 2rem;
+            display: block;
+            width: 80%;
+            padding-top: 15px;
+            margin-left: 86px;
+        }
+    }
+    p{
+        color:$blanco;
+    }
+    &:after{
+        height: 10px;
+        display: block;
+        width: 80%;
+        margin: 50px auto 0 auto;
+        border-bottom: solid 3px white;
+        content: '';
+    }
+
+}/*fin aboutus*/

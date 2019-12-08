@@ -1,0 +1,23 @@
+.navbar-theme{
+    height: 100px;
+    background-color:$blanco;
+    .logo{
+        width: 400px;
+        height: auto;
+    }
+    .navbar-nav{
+        li{
+            color:$gris;
+            a{
+                color:$gris;
+                &:hover{
+                    color:$rojo;
+                }
+                &:active{
+                    color:$rojo;
+                }
+            }
+        }
+    }
+/*fin navbartheme*/
+}

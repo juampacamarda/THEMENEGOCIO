@@ -1,0 +1,98 @@
+#services{
+    background: $blanco;
+    background: linear-gradient(0deg,hsla(39,74%,68%,0) 91%,$amarillo 100%); 
+    .services-intro{
+        .services-tittle {
+        background-image: url("../images/chacra-nativa-iso.png");
+        background-repeat: no-repeat;
+        background-size: 50%;
+        height: 81px;
+        width: 600px;
+        margin: 0 auto;
+        padding: 0px 0 0 89px;
+        h2 {
+        font-size: 2rem;
+        display: block;
+        width: 80%;
+        padding-top: 15px;
+        margin-left: 86px;
+        }
+        }
+        p{
+            color:$negro;
+            display: block;
+            width: 920px;
+            margin: 25px auto 50px;
+        }
+    }
+    .service {
+            height: 480px;
+            display: block;
+            overflow: hidden;
+            .service-img{
+                transition: $transition;
+            }
+            .service-detail {
+                position: absolute;
+                top: 0;
+                height: 480px;
+                background: rgba($negro, 0.4);
+                width: 350px;
+                padding: 20px;
+                transition: $transition;
+                .detail-titulo {
+                    color: $blanco;
+                    margin: 50px 0 50px;
+                    text-transform: uppercase;
+                    font-style: italic;
+                    font-size: 1.5rem;
+                }
+                .detail-descripcion {
+                    color: $blanco;
+                    font-family: $font-montserrat;
+                    font-style: italic;
+                    font-size: 1.25rem;
+                    margin-bottom: 50px;
+                    opacity: 0;
+                    transition: $transition;
+                }
+                .btn-service {
+                    border: 2px solid $blanco;
+                    background-color:transparent;
+                    color:$blanco;
+                    &:hover, &:active, &:focus{
+                        background-color: $blanco;
+                        color: $negro;
+                    }
+                }
+                &:before{
+                    display: block;
+                    position: absolute;
+                    width: 95%;
+                    height: 92%;
+                    border: 2px solid #fff;
+                    content: "";
+                    left: 8px;
+                    opacity: 0;
+                    transition: $transition;
+                }
+            }
+        &:hover{
+            .service-img{
+                transform: scale(1.2);
+            }
+            .service-detail {
+                background: rgba($negro, 0.7);
+                .detail-descripcion, &:before{
+                    opacity: 1;
+                }
+                .btn-service{
+                    background-color: $blanco;
+                    color: $negro;
+                }
+            }
+            
+        }
+    }
+
+}

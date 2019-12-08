@@ -1,0 +1,9 @@
+#portada-home{
+    .carousel-inner{
+        height: 450px;
+        .carousel-item {
+            position: absolute !important;
+            top: -50%;
+        }
+    }
+}

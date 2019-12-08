@@ -1,0 +1,112 @@
+// Font Variables
+$light: 300;
+$light-i: 300i;
+$medium: 500;
+$medium-i:500i;
+$bold: 700;
+$bold-i:700i;
+
+// Source Code Font
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,500,500i,700,700i|Roboto:300,500,700&display=swap');
+
+@mixin montserrat-light{
+  font-family: $font-montserrat;
+  font-weight: $light;
+}
+
+
+@mixin montserrat-medium{
+  font-family: $font-montserrat;
+  font-weight: $medium;
+}
+
+
+@mixin montserrat-black{
+  font-family: $font-montserrat;
+  font-weight: $bold;
+}
+
+@mixin roboto-medium{
+  font-family: $font-roboto;
+  font-weight: $light;
+}
+@mixin roboto-black{
+  font-family: $font-roboto;
+  font-weight: $bold;
+}
+
+body{
+  @include montserrat-medium;
+  font-size: 16px;
+  line-height: 1.38;
+  letter-spacing: 0.36px;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+p{
+  @include roboto-medium;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  letter-spacing: 0.7px;
+  text-align: justify;
+  @include respond-above(xs) {
+    font-size: 1rem;
+  }
+}
+
+h1 {
+  @include montserrat-black;
+  font-size: 1.75rem;
+  line-height: 1.08;
+  letter-spacing: 1.18px;
+  margin-bottom:  2rem;
+  @include respond-above(sm) {
+    font-size: 2.625rem;
+    margin-bottom:  3rem;
+  }
+  @include respond-above(md) {
+    font-size: 3.25rem;
+    line-height: 1.25;
+    margin-bottom:  4rem;
+  }
+}
+
+h2 {
+  @include montserrat-light;
+  color:$rojo;
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.32;
+  letter-spacing: 0.5px;
+  margin-bottom:  1.625rem;
+  @include respond-above(xs) {
+    font-size: 1rem;
+  }
+  @include respond-above(sm) {
+    font-size: 1.375rem
+  }
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+
+
+ul, ol{
+  margin: 0;
+  padding: 0;
+  li{
+    list-style: none;
+    display: inline-block;
+    padding: 0 1rem;
+    @include montserrat-light;
+  }
+}
+
+
