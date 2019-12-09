@@ -22,11 +22,11 @@
             color:$negro;
             display: block;
             width: 920px;
-            margin: 25px auto 50px;
+            margin: 10px auto 15px;
         }
     }
     .service {
-            height: 480px;
+            height: 430px;
             display: block;
             overflow: hidden;
             .service-img{
@@ -35,17 +35,18 @@
             .service-detail {
                 position: absolute;
                 top: 0;
-                height: 480px;
+                height: 430px;
                 background: rgba($negro, 0.4);
                 width: 350px;
                 padding: 20px;
                 transition: $transition;
                 .detail-titulo {
                     color: $blanco;
-                    margin: 50px 0 50px;
+                    margin: 30px 0 50px;
                     text-transform: uppercase;
                     font-style: italic;
                     font-size: 1.5rem;
+                    text-shadow: $sombra-texto;
                 }
                 .detail-descripcion {
                     color: $blanco;
