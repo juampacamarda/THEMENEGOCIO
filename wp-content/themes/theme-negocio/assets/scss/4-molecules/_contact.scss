@@ -1,0 +1,18 @@
+#contact {
+    background-position: 0 -110px;
+    background-repeat: no-repeat;
+    .form {
+    background: rgba($color: $negro, $alpha: 0.5);
+    height: 500px;
+    border-radius: 4%;
+    position: relative;
+    padding: 10px;
+    }
+    .form-tittle {
+      color: #fff;
+      font-size: 1.5rem;
+      font-style: italic;
+      margin: 25px 0;
+      font-weight: lighter;
+    }
+}
