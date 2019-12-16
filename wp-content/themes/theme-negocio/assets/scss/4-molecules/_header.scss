@@ -1,9 +1,23 @@
 .navbar-theme{
     height: 100px;
     background-color:$blanco;
+    @include respond-below(sm){
+        min-height: 60px;
+        height: auto;
+    }
     .logo{
         width: 400px;
         height: auto;
+        @include respond-below(sm){
+            width: 225px;
+            h1 {
+                font-weight: 300;
+                text-align: left;
+                font-style: italic;
+                color: $rojo;
+                margin: 0;
+            }
+        }
     }
     .navbar-nav{
         li{

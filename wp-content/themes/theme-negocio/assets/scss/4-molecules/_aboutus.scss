@@ -1,17 +1,25 @@
 #about{
     background-color: $amarillo;
+    @include respond-below(md){
+        min-height: 400px;
+        height: auto;
+    }
     .about-tittle {
+        @include respond-above(md){
             background-image: url("../images/chacra-nativa-byr.png");
             background-repeat: no-repeat;
             background-size: 60%;
             height: 81px;
             padding: 0 0px 0 130px;
+        }
         h2 {
             font-size: 2rem;
             display: block;
-            width: 80%;
-            padding-top: 15px;
-            margin-left: 86px;
+            @include respond-above(md){
+                width: 80%;
+                padding-top: 15px;
+                margin-left: 86px;
+            }
         }
     }
     p{

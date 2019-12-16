@@ -1,6 +1,10 @@
 #contact {
     background-position: 0 -110px;
     background-repeat: no-repeat;
+    @include respond-below(md){
+        min-height: 400px;
+        height: auto;
+    }
     .form {
     background: rgba($color: $negro, $alpha: 0.5);
     height: 500px;

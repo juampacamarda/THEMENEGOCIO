@@ -1,0 +1,72 @@
+#portada{
+    height: 400px;
+    min-height: auto;
+    padding: 0;
+    .portada-cover{
+        height: 100%;
+        width: 100%;
+        background-color: rgba($negro, 0.5);
+        .titulo-portada{
+            color: $blanco;
+            font-style: italic;
+            font-weight: 300;
+            margin: 0;
+            display: block;
+        }
+    }
+    
+}
+#data{
+    min-height: 60vh;
+    height: auto;
+    background-color: $amarillo;
+    @include respond-below(md){
+        min-height: 400px;
+        height: auto;
+    }
+    .service-tittle {
+        @include respond-above(md){
+            background-image: url("../images/chacra-nativa-byr.png");
+            background-repeat: no-repeat;
+            background-size: 45%;
+            height: 81px;
+            padding: 0 0 0 130px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            font-size: 2rem;
+            display: block;
+            @include respond-above(md){
+                width: 70%;
+                padding: 24px 0 5px 0;
+                margin-left: 160px;
+                border-bottom: 2px solid;
+            }
+        }
+    }
+    p{
+        color:$blanco;
+    }
+    /*&:after{
+        height: 10px;
+        display: block;
+        width: 80%;
+        margin: 50px auto 0 auto;
+        border-bottom: solid 3px white;
+        content: '';
+    }*/
+    .details{
+        color: $rojo;
+        padding: 0 40px;
+        h2{
+            padding: 24px 0 5px;
+            font-size: 2rem;
+            display: block;
+            margin: 0px 0 34px;
+            border-bottom: 2px solid;
+        }
+        p{
+            color:$rojo;
+        }
+    }
+}

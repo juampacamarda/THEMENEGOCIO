@@ -1,45 +1,75 @@
 #services{
     background: $blanco;
     background: linear-gradient(0deg,hsla(39,74%,68%,0) 91%,$amarillo 100%); 
+    @include respond-below(md){
+        min-height: 400px;
+        height: auto;
+    }
     .services-intro{
         .services-tittle {
-        background-image: url("../images/chacra-nativa-iso.png");
-        background-repeat: no-repeat;
-        background-size: 50%;
-        height: 81px;
-        width: 600px;
-        margin: 0 auto;
-        padding: 0px 0 0 89px;
-        h2 {
-        font-size: 2rem;
-        display: block;
-        width: 80%;
-        padding-top: 15px;
-        margin-left: 86px;
-        }
+            @include respond-above(md){
+                background-image: url("../images/chacra-nativa-iso.png");
+                background-repeat: no-repeat;
+                background-size: 50%;
+                height: 81px;
+                width: 600px;
+                margin: 0 auto;
+                padding: 0px 0 0 89px;
+            }
+            h2 {
+                font-size: 2rem;
+                display: block;
+                @include respond-above(md){
+                    width: 80%;
+                    padding-top: 15px;
+                    margin-left: 86px;
+                }
+            }
         }
         p{
             color:$negro;
             display: block;
-            width: 920px;
             margin: 10px auto 15px;
+            @include respond-above(md){
+                width: 920px;
+            }
         }
     }
     .service {
             height: 430px;
             display: block;
             overflow: hidden;
+            @include respond-below(sm){
+                height: 250px;
+            }
+            @include respond-between(sm, lg){
+                height: 100%;
+            }
             .service-img{
                 transition: $transition;
             }
             .service-detail {
                 position: absolute;
                 top: 0;
-                height: 430px;
                 background: rgba($negro, 0.4);
-                width: 350px;
-                padding: 20px;
                 transition: $transition;
+                height: 100%;
+                width: 345px;
+                padding: 10px;
+                @include respond-above(xs){
+                    height: 100%;
+                    width: 210px;
+                }
+                @include respond-between(md,lg){
+                    height: 100%;
+                    width: 290px;
+                    padding: 10px;
+                }
+                @include respond-above(lg){
+                    height: 430px;
+                    width: 350px;
+                    padding: 20px;
+                }
                 .detail-titulo {
                     color: $blanco;
                     margin: 30px 0 50px;
@@ -56,11 +86,20 @@
                     margin-bottom: 50px;
                     opacity: 0;
                     transition: $transition;
+                    @include respond-below(lg){
+                        display: none;
+                    }
                 }
                 .btn-service {
                     border: 2px solid $blanco;
                     background-color:transparent;
                     color:$blanco;
+                    @include respond-below(sm){
+                        margin: 60px 10px;
+                    }
+                    @include respond-between(sm, lg){
+                        margin: 35% 0 0 0;                    
+                    }
                     &:hover, &:active, &:focus{
                         background-color: $blanco;
                         color: $negro;

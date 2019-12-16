@@ -26,12 +26,12 @@ add_filter('acf/format_value/type=textarea', 'do_shortcode');
 // Enable shortcodes in widgets
 add_filter('widget_text', 'do_shortcode');
 //abao carga estilos
-function loviz_scripts(){
+function theme_scripts(){
 	wp_enqueue_style('theme-style', get_stylesheet_directory_uri() .'/assets/scss/theme-negocio.min.css');
 	wp_enqueue_script('theme-js', get_stylesheet_directory_uri() .'/assets/theme-negocio.min.js');
 
 }
-add_action('wp_enqueue_scripts','loviz_scripts');
+add_action('wp_enqueue_scripts','theme_scripts');
 //subir svg
 function custom_mimes( $mimes = array() ) {
 	// New allowed mime types.
