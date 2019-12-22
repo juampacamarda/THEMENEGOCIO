@@ -6,7 +6,6 @@
     }
     .about-tittle {
         @include respond-above(md){
-            background-image: url("../images/chacra-nativa-byr.png");
             background-repeat: no-repeat;
             background-size: 60%;
             height: 81px;

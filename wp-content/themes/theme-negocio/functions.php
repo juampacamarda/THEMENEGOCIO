@@ -41,3 +41,14 @@ function custom_mimes( $mimes = array() ) {
 }
 add_filter( 'upload_mimes', 'custom_mimes' );
 //fin subir svg
+
+//theme options
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page();
+	
+}
+if( function_exists('acf_set_options_page_title') )
+{
+    acf_set_options_page_title( __('Theme Options') );
+}

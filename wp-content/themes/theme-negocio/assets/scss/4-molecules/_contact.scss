@@ -6,17 +6,43 @@
         height: auto;
     }
     .form {
-    background: rgba($color: $negro, $alpha: 0.5);
-    height: 500px;
-    border-radius: 4%;
-    position: relative;
-    padding: 10px;
+      background: rgba($color: $negro, $alpha: 0.5);
+      height: 500px;
+      border-radius: 4%;
+      position: relative;
+      padding: 10px;
+      color:$blanco;
+      label {
+        width: 100%;
+        margin: 5px 0;
+      }
+      input {
+        border-radius: 14px!important;
+        border: none!important;
+        width: 100%;
+      }
+      textarea {
+        height: 90px !important;
+        margin: 10px 0;
+        border-radius: 14px!important;
+        width: 100%;
+        border: none!important;
+        padding: 0 10px;
+        font-weight: lighter;
+      }
+      .btn{
+        background-color: $amarillo;
+      }
+      .btn:hover, .btn:focus{
+        background-color: $negro;
+        color:$blanco;
+      }
     }
     .form-tittle {
       color: #fff;
       font-size: 1.5rem;
       font-style: italic;
-      margin: 25px 0;
+      margin: 25px 0 15px;
       font-weight: lighter;
     }
 }

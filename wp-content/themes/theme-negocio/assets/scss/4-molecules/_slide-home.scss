@@ -14,6 +14,9 @@
     border-bottom: 3px solid $amarillo;
     .carousel-inner{
         @include respond-above(lg){height: 95vh;}
-        
+        .carousel-item{
+            height: 450px;
+            background-size: cover;
+        }
     }
 }

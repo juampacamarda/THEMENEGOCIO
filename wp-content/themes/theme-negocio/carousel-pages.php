@@ -1,12 +1,29 @@
 <div id="slide-pages">
         <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active" data-interval="10000">
-                    <img src="<?php echo get_template_directory_uri();?>/assets/images/slide-01.JPG" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item" data-interval="2000">
-                    <img src="<?php echo get_template_directory_uri();?>/assets/images/slide-02.JPG" class="d-block w-100" alt="...">
-                </div>
+                            <div class="carousel-item active"  <?php if ( get_field( 'imagen01') ) { ?>style="background-image: url('<?php the_field( 'imagen01'  ); ?>');"<?php } ?>>
+                            
+                            </div>
+                            <!--fin repeater-->
+                            <?php
+                            // check if the repeater field has rows of data
+                            if( have_rows('slide_imagen') ):?>
+
+                                <?php while( have_rows('slide_imagen') ): the_row(); 
+                                // vars
+                                //$image = get_sub_field('imagen_slider')?>
+
+                                <div class="carousel-item"  <?php if ( get_sub_field('imagen_slider') ) { ?>style="background-image: url('<?php the_sub_field( 'imagen_slider' ); ?>');"<?php } ?> data-interval="4000" >
+                                    <!--<//?php echo '<img src="'. $image['url'] .'" class="img-fluid d-block w-100" />';?>!-->
+                                </div>
+
+                                <?php endwhile;
+
+                            else :
+
+                                // no rows found
+
+                            endif;?>
             
             </div>
             <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">

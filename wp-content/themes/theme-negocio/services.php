@@ -1,65 +1,54 @@
 <section id="services">
         <div class="container">
-            <div class="services-intro">
-                <div class="services-tittle">
-                    <h2>Nuestros Servicios</h2>
+            <div class="services-intro" >
+                <div class="services-tittle" <?php if ( get_field( 'logo_services') ) { ?>style="background-image: url('<?php the_field( 'logo_services' ); ?>');"<?php } ?> >
+                    <h2><?php the_field( 'tittle_services' ); ?></h2>
                 </div>
                 <p>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.
+                    <?php the_field( 'text_services' ); ?>
                 </p>
             </div>
             <div class="row d-flex justify-content-center">
-                <div class="col- col-sm-4 col-lg-4 my-2">
-                    <a class="service" href="">
-                        <div class="service-img">
-                            <img src="<?php echo get_template_directory_uri();?>/assets/images/img-service-01.png" class="d-block img-fluid" alt="">
-                        </div>
-                        <div class="service-detail">
-                            <h3 class="detail-titulo">Servicio Ejemplo 01</h3>
-                            <p class="detail-descripcion">
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                            </p>
-                            <div class="d-flex justify-content-end">
-                                <h4 class="btn btn-service">Ver Más</h4>
+                <?php if( have_rows('service-repeater') ): ?>
+
+                     <div class="col- col-sm-4 col-lg-4 my-2">
+
+                    <?php while( have_rows('service-repeater') ): the_row(); 
+
+                        // vars
+                        $title = get_sub_field('titulo_servicio');
+                        $image = get_sub_field('imagen');
+                        $txt = get_sub_field('txt');
+                        $link = get_sub_field('link');
+
+                        ?>
+                        <?php if( $link ): ?>
+                        <a class="service" href="<?php echo $link; ?>">
+                        <?php endif; ?>
+                            <div class="service-img">
+                                <?php echo '<img src="'. $image['url'] .'" class="img-fluid d-block" />';?>
                             </div>
-                            
-                        </div>
-                    </a>
-                </div>
-                <div class="col- col-sm-4 col-lg-4 my-2">
-                    <a class="service" href="">
-                        <div class="service-img">
-                            <img src="<?php echo get_template_directory_uri();?>/assets/images/img-service-01.png" class="d-block img-fluid" alt="">
-                        </div>
-                        <div class="service-detail">
-                            <h3 class="detail-titulo">Servicio Ejemplo 01</h3>
-                            <p class="detail-descripcion">
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                            </p>
-                            <div class="d-flex justify-content-end">
-                                <h4 class="btn btn-service">Ver Más</h4>
+                            <div class="service-detail">
+
+                                <h3 class="detail-titulo"><?php echo $title; ?></h3>
+                                <p class="detail-descripcion">
+                                    <?php echo $txt; ?>
+                                </p>
+                                <div class="d-flex justify-content-end">
+                                    <h4 class="btn btn-service">Ver Más</h4>
+                                </div>
+                                
                             </div>
-                            
-                        </div>
-                    </a>
-                </div>
-                <div class="col-12 col-sm-4 col-lg-4 my-2">
-                    <a class="service" href="">
-                        <div class="service-img">
-                            <img src="<?php echo get_template_directory_uri();?>/assets/images/img-service-01.png" class="d-block img-fluid" alt="">
-                        </div>
-                        <div class="service-detail">
-                            <h3 class="detail-titulo">Servicio Ejemplo 01</h3>
-                            <p class="detail-descripcion">
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                            </p>
-                            <div class="d-flex justify-content-end">
-                                <h4 class="btn btn-service">Ver Más</h4>
+                        <?php if( $link ): ?>    
+                        </a>
+                        <?php endif; ?>
+
+                    <?php endwhile; ?>
+
                             </div>
-                            
-                        </div>
-                    </a>
-                </div>
+
+                <?php endif; ?>
+
             </div>
         </div>
     </section>

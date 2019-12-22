@@ -12,7 +12,10 @@
             <nav class="navbar navbar-theme navbar-light navbar-expand-lg">
                 <div class="container">
                     <a class="navbar-brand logo" href="#">
-                        <img src="<?php echo get_template_directory_uri();?>/assets/images/chacra-nativa.png" class="d-none d-sm-block img-fluid" alt="">
+                        <!--<img src="<//?php echo get_template_directory_uri();?>/assets/images/chacra-nativa.png" class="d-none d-sm-block img-fluid" alt="">-->
+                        <?php if ( get_field( 'logo_del_sitio', 'option') ) { ?>
+                            <img src="<?php the_field( 'logo_del_sitio', 'option' ); ?>" class="d-none d-sm-block img-fluid"  />
+                        <?php } ?>
                         <h1 class="d-block d-sm-none">Chacra Nativa</h1>
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
