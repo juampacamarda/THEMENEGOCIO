@@ -11,12 +11,15 @@
     }
 }
 #slide-pages{
+    padding: 50px 0;
     border-bottom: 3px solid $amarillo;
+    background-color: $amarillo;
     .carousel-inner{
-        @include respond-above(lg){height: 95vh;}
+        //@include respond-above(lg){height: 95vh;}
         .carousel-item{
             height: 450px;
             background-size: cover;
+            background-position: center;
         }
     }
 }

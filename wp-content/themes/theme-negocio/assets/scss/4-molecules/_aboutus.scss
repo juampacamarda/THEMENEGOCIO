@@ -5,6 +5,9 @@
         height: auto;
     }
     .about-tittle {
+        @include respond-below(md){
+            background-image: none!important;
+        }
         @include respond-above(md){
             background-repeat: no-repeat;
             background-size: 60%;

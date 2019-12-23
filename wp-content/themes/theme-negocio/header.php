@@ -11,7 +11,7 @@
     <header>
             <nav class="navbar navbar-theme navbar-light navbar-expand-lg">
                 <div class="container">
-                    <a class="navbar-brand logo" href="#">
+                    <a class="navbar-brand logo animated fadeInLeft slow" href="<?php echo get_site_url(); ?>">
                         <!--<img src="<//?php echo get_template_directory_uri();?>/assets/images/chacra-nativa.png" class="d-none d-sm-block img-fluid" alt="">-->
                         <?php if ( get_field( 'logo_del_sitio', 'option') ) { ?>
                             <img src="<?php the_field( 'logo_del_sitio', 'option' ); ?>" class="d-none d-sm-block img-fluid"  />
@@ -28,7 +28,7 @@
                         <?php wp_nav_menu(array(
                         'theme_location' => 'superior',
                         'container' =>'div',
-                        'container_class' => 'collapse navbar-collapse',
+                        'container_class' => 'collapse navbar-collapse animated fadeInRight slow',
                         'container_id' => 'navbarTogglerDemo02',
                         'items_wrap' => '<ul class="navbar-nav ml-auto mt-2 mt-lg-0">%3$s</ul>',
                         'items_class' => 'nav-item',

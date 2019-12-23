@@ -2,7 +2,10 @@
     <footer>
             <div class="logo-footer row d-flex justify-content-center">
                 <div class="col-3 py-3 col-lg-2">
-                    <img src="<?php echo get_template_directory_uri();?>/assets/images/chacra-nativa-iso.png" class="d-block img-fluid mx-auto" alt="">
+                    
+                    <?php if ( get_field( 'img_footer', 'option') ) { ?>
+                        <img src="<?php the_field( 'img_footer', 'option' ); ?>" class="d-block img-fluid mx-auto"/>
+                    <?php } ?>
                 </div>
             </div>
     </footer>

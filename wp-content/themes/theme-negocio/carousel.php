@@ -1,4 +1,4 @@
-<div id="portada-home">
+<div id="portada-home" class="animated fadeInUpBig" >
         <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                             <div class="carousel-item active">

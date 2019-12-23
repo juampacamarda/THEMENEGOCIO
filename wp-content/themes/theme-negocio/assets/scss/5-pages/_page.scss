@@ -2,6 +2,8 @@
     height: 400px;
     min-height: auto;
     padding: 0;
+    background-size: cover;
+    background-position: center;
     .portada-cover{
         height: 100%;
         width: 100%;
@@ -25,13 +27,16 @@
         height: auto;
     }
     .service-tittle {
+        @include respond-below(md){
+            background-image: none!important;
+        }
         @include respond-above(md){
-            background-image: url("../images/chacra-nativa-byr.png");
             background-repeat: no-repeat;
             background-size: 45%;
             height: 81px;
             padding: 0 0 0 130px;
             margin-bottom: 30px;
+            text-transform: uppercase;
         }
         h2 {
             font-size: 2rem;

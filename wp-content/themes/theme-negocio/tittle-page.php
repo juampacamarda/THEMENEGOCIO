@@ -1,7 +1,5 @@
-<section id="portada" style="background-image: url('<?php echo get_template_directory_uri();?>/assets/images/bgcontact.png');">
+<section id="portada" <?php if ( get_field( 'imagen_portada') ) { ?>style="background-image: url('<?php the_field( 'imagen_portada' ); ?>');"<?php } ?>>
     <div class="portada-cover d-flex align-items-center justify-content-center">
-        <h1 class="titulo-portada">
-            ALQUILER CASA QUINTA
-        </h1>
+ 
     </div>
 </section>
