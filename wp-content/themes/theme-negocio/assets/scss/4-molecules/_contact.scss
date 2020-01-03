@@ -2,12 +2,14 @@
     background-position: 0 -110px;
     background-repeat: no-repeat;
     @include respond-below(md){
+        background-position:  0;
+        background-size: cover;
         min-height: 400px;
         height: auto;
     }
     .form {
       background: rgba($color: $negro, $alpha: 0.5);
-      height: 500px;
+      min-height: 500px;
       border-radius: 4%;
       position: relative;
       padding: 10px;

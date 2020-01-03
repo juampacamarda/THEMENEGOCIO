@@ -41,12 +41,16 @@
         h2 {
             font-size: 2rem;
             display: block;
+            @include respond-below(md){
+                width: 100%;
+            }
             @include respond-above(md){
-                width: 70%;
+                width: 75%;
                 padding: 24px 0 5px 0;
                 margin-left: 160px;
                 border-bottom: 2px solid;
             }
+
         }
     }
     p{

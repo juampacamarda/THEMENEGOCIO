@@ -7,7 +7,7 @@
     <?php wp_head();?>
 </head>
 <body>
-    <div class="site-container">
+<div class="site-container">
     <header>
             <nav class="navbar navbar-theme navbar-light navbar-expand-lg">
                 <div class="container">
@@ -38,4 +38,3 @@
                 </div><!--fin container-->
             </nav>
     </header>
-    <main class="site-content">

@@ -10,14 +10,21 @@
         height: auto;
         @include respond-below(sm){
             width: 225px;
+            @include respond-below(xs){
+                width: 210px;
+            }
             h1 {
                 font-weight: 300;
                 text-align: left;
                 font-style: italic;
                 color: $rojo;
                 margin: 0;
+                @include respond-below(xs){
+                    font-size: 20px;
+                }
             }
         }
+
     }
     .navbar-nav{
         li{

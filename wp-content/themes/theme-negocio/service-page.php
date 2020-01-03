@@ -4,6 +4,7 @@ Template Name: service-plantilla
 */
 ?>
 <?php get_header();?>
+<main class="site-content">
 <!--instedando portada de pàgina-->
 <?php get_template_part('tittle', 'page');?>
 <section id="data" class=" d-lg-flex align-items-lg-center">
@@ -34,4 +35,5 @@ Template Name: service-plantilla
 </section>
 <?php get_template_part('carousel', 'pages');?>
 <?php get_template_part('contact', 'pages');?>
+</main>
 <?php get_footer();?> 
