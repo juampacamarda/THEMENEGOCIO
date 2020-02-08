@@ -1,0 +1,26 @@
+
+#info-servicio {
+    min-height: 218px !important;
+    background: $amarillo;
+    .container {
+        border: 2px solid #fff;
+    }
+    .tarifa-tittle {
+        margin: 0 0 10px;
+    }
+    .texto-tarifa {
+        font-style: italic;
+        text-align: center;
+        span {
+            display: block;
+            font-size: small;
+            font-style: normal;
+            text-align: justify;
+        }
+    }
+    .btn {
+        background: $blanco;
+        margin: 20px 0 0 0;
+        width: 100%;
+    }
+}

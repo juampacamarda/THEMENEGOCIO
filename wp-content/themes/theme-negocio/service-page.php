@@ -34,6 +34,7 @@ Template Name: service-plantilla
 
 </section>
 <?php get_template_part('carousel', 'pages');?>
+<?php get_template_part('info-service');?>
 <?php get_template_part('contact', 'pages');?>
 </main>
 <?php get_footer();?> 
