@@ -54,6 +54,9 @@
         }
     }
     p{
+        @include respond-below(md){
+            font-size:16px
+        }
         color:$blanco;
     }
     /*&:after{
@@ -66,7 +69,9 @@
     }*/
     .details{
         color: $rojo;
-        padding: 0 40px;
+        @include respond-above(md){
+            padding: 0 40px;
+        }
         h2{
             padding: 24px 0 5px;
             font-size: 2rem;
@@ -76,6 +81,12 @@
         }
         p{
             color:$rojo;
+
+        }
+    }
+    #fullw{
+       .service-tittle {
+        background-size: 35%;
         }
     }
 }

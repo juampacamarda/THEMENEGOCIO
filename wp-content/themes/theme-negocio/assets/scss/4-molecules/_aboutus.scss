@@ -26,6 +26,9 @@
     }
     p{
         color:$blanco;
+         @include respond-below(md){
+             font-size: 16px;
+         }
     }
     &:after{
         height: 10px;

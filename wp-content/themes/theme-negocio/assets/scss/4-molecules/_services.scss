@@ -100,7 +100,7 @@
                     position: absolute;
                     bottom: 20 !important;
                     @include respond-below(sm){
-                        margin: 0px 15px;
+                        margin: 0px;
                     }
                     &:hover, &:active, &:focus{
                         background-color: $blanco;

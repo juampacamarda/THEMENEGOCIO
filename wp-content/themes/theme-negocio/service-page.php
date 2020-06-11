@@ -10,25 +10,37 @@ Template Name: service-plantilla
 <section id="data" class=" d-lg-flex align-items-lg-center">
     
     <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="service-tittle" <?php if ( get_field( 'logo_descripcion') ) { ?>style="background-image: url('<?php the_field( 'logo_descripcion' ); ?>');"<?php } ?>>
-                    <h2><?php the_title(); ?></h2>
+        <div class="row d-flex justify-content-center">
+            <?php if (get_field('ficha_tecnica')) { ?>
+                <div class="col-md-8">
+                    <div class="service-tittle" <?php if ( get_field( 'logo_descripcion') ) { ?>style="background-image: url('<?php the_field( 'logo_descripcion' ); ?>');"<?php } ?>>
+                        <h2><?php the_title(); ?></h2>
+                    </div>
+                    <p>
+                        <?php the_field( 'descripcion' ); ?>
+                    </p>
                 </div>
-                <p>
-                    <?php the_field( 'descripcion' ); ?>
-                </p>
-            </div>
-
-            <div class="col-md-4 details">
-                <div>
-                    <h2>FICHA TÉCNICA</h2>
+            
+                <div class="col-md-4 details">
+                    <div>
+                        <h2>FICHA TÉCNICA</h2>
+                    </div>
+                    <p>
+                        <?php the_field( 'ficha_tecnica' ); ?>
+                    </p>
                 </div>
-                <p>
-                    <?php the_field( 'ficha_tecnica' ); ?>
+            <?php } else { ;?>
 
-                </p>
-            </div>
+                <div id="fullw" class="col-md-10">
+                    <div class="service-tittle" <?php if ( get_field( 'logo_descripcion') ) { ?>style="background-image: url('<?php the_field( 'logo_descripcion' ); ?>');"<?php } ?>>
+                        <h2><?php the_title(); ?></h2>
+                    </div>
+                    <p>
+                        <?php the_field( 'descripcion' ); ?>
+                    </p>
+                </div>
+
+            <?php } ;?>
         </div>        
     </div> 
 

@@ -26,8 +26,9 @@
                         <?php if( $link ): ?>
                         <a class="service" href="<?php echo $link; ?>">
                             <?php endif; ?>
-                                <div class="service-img">
-                                    <?php echo '<img src="'. $image['url'] .'" class="img-fluid d-block" />';?>
+                                <div class="service-img" style="background-image:url('<?php echo  $image['url'] ;?>'); height:430px; background-position:center; background-size:cover">
+
+                                    <?php// echo '<img src="'. $image['url'] .'" class="img-fluid d-block" />';?>
                                 </div>
                                 <div class="service-detail">
 

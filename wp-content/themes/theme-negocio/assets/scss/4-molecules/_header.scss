@@ -1,7 +1,7 @@
 .navbar-theme{
     height: 100px;
     background-color:$blanco;
-    @include respond-below(sm){
+    @include respond-below(lg){
         min-height: 60px;
         height: auto;
     }
@@ -26,16 +26,33 @@
         }
 
     }
-    .navbar-nav{
-        li{
-            color:$gris;
-            a{
-                color:$gris;
-                &:hover{
-                    color:$rojo;
+    .content-menus{
+        width: 100%;;
+        .menu-redes{
+            padding-right: 15px;
+            margin-bottom: 5px;
+            ul{
+                li{
+                    a{
+                        font-size: 24px;
+                        color:$rojo;
+                    }
                 }
-                &:active{
-                    color:$rojo;
+            }
+        }
+        .navbar-nav{
+            li{
+                color:$gris;
+                a{
+                    color:$gris!important;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    &:hover{
+                        color:$rojo;
+                    }
+                    &:active{
+                        color:$rojo;
+                    }
                 }
             }
         }

@@ -19,7 +19,7 @@
                     <?php the_field( 'frase_' ); ?>
                 <?php $tarifario = get_field( 'tarifario' ); ?>
                 <?php if ( $tarifario ) { ?>
-                <a href="<?php echo $tarifario['url']; ?>" target="_blank" class="btn">DESCARGAR TARIFARIO</a>
+                <a href="<?php echo $tarifario['url']; ?>" target="_blank" class="btn">DESCARGAR DETALLE</a>
                 <?php } ?>
             </div>
         </div>
