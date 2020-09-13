@@ -2,12 +2,12 @@
     height: 100px;
     background-color:$blanco;
     @include respond-below(lg){
-        min-height: 60px;
+        min-height: 100px;
         height: auto;
     }
     .logo{
-        width: 400px;
-        height: auto;
+        width: auto;
+        height: 80px;
         @include respond-below(sm){
             width: 225px;
             @include respond-below(xs){

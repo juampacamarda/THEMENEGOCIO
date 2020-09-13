@@ -15,7 +15,13 @@
                         <!--<img src="<//?php echo get_template_directory_uri();?>/assets/images/chacra-nativa.png" class="d-none d-sm-block img-fluid" alt="">-->
                         <?php if ( get_field( 'logo_del_sitio', 'option') ) { ?>
                             <img src="<?php the_field( 'logo_del_sitio', 'option' ); ?>" class="d-none d-sm-block img-fluid"  />
+                        <?php } else {?>
+
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Chow-tmp-logo.png" alt="" class="d-block img-fluid" style="margin-top:-15px">
+
+
                         <?php } ?>
+
                         <h1 class="d-block d-sm-none">Chacra Nativa</h1>
                     </a>
                     
@@ -29,13 +35,13 @@
 
                             <ul class="nav">
                                 <li>
-                                    <a href="https://www.facebook.com/Chacra-Nativa" target="_blank">
+                                    <a href="#" target="_blank">
                                         <i class="fab fa-facebook"></i>
                                     </a>
                                 </li>
                                 
                                 <li>
-                                    <a href=" https://www.instagram.com/chacra_nativa/" target="_blank">
+                                    <a href="#" target="_blank">
                                         <i class="fab fa-instagram" aria-hidden="true"></i>
                                     </a>
                                 </li>

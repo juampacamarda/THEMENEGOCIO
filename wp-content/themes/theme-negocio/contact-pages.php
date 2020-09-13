@@ -1,5 +1,9 @@
 
-<section id="contact"  <?php if ( get_field( 'contact_bg', 'option') ) { ?>style="background-image: url('<?php the_field( 'contact_bg', 'option' ); ?>');"<?php } ?>>
+<section id="contact" 
+    <?php if ( get_field( 'contact_bg', 'option') ) { ?>
+        style="background-image: url('<?php the_field( 'contact_bg', 'option' ); ?>');"
+    <?php }else{ ?> style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/bgcontact.png');" <?php } ?>
+        >
         <div class="container my-5">
             <div class="row d-flex justify-content-center">
                 <div class="col-12 col-lg-7 direccion">

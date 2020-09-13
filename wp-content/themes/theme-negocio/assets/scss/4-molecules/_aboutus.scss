@@ -10,7 +10,8 @@
         }
         @include respond-above(md){
             background-repeat: no-repeat;
-            background-size: 60%;
+            background-size: 75px;
+            background-position-x: 25%;
             height: 81px;
             padding: 0 0px 0 130px;
         }
@@ -20,7 +21,7 @@
             @include respond-above(md){
                 width: 80%;
                 padding-top: 15px;
-                margin-left: 86px;
+                margin-left: 20px;
             }
         }
     }

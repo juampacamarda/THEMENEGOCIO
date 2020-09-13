@@ -1,7 +1,10 @@
 <section id="services">
     <div class="container">
             <div class="services-intro" >
-                <div class="services-tittle" <?php if ( get_field( 'logo_services') ) { ?>style="background-image: url('<?php the_field( 'logo_services' ); ?>');"<?php } ?> >
+                <div class="services-tittle" <?php if ( get_field( 'logo_services') ) { ?>style="background-image: url('<?php the_field( 'logo_services' ); ?>');"
+                <?php } else { ?> 
+                 style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/chow-color-iso.png');" <?php } ?> 
+                 >
                     <h2><?php the_field( 'tittle_services' ); ?></h2>
                 </div>
                 <p>

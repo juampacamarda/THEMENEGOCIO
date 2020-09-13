@@ -17,6 +17,7 @@
             <div class="col-lg-8">
                 <p class="texto-tarifa">
                     <?php the_field( 'frase_' ); ?>
+                </p>
                 <?php $tarifario = get_field( 'tarifario' ); ?>
                 <?php if ( $tarifario ) { ?>
                 <a href="<?php echo $tarifario['url']; ?>" target="_blank" class="btn">DESCARGAR DETALLE</a>

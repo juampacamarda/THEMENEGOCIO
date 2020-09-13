@@ -12,11 +12,12 @@
             }
             @include respond-above(md){
                 background-repeat: no-repeat;
-                background-size: 50%;
+                background-size: 75px;
+                background-position-x: 20%;
                 height: 81px;
                 width: 615px;
                 margin: 0 auto;
-                padding: 0 0 0 140px;
+                /*padding: 0 0 0 140px;*/
             }
             h2 {
                 font-size: 2rem;

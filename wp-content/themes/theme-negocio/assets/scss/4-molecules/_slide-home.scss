@@ -4,7 +4,9 @@
         .carousel-item {
             @include respond-above(lg){
                 position: absolute !important;
-                top: -63%;
+                background-size: cover;
+                background-position: center;
+
             }
             
         }
